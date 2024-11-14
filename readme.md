@@ -51,13 +51,13 @@ e) 对于问题三，将假设c)更改为：对于检测为不合格的半成品
 
 $$
 \begin{equation}
-	P(X = k) = \binom{n}{k} (r_i)^k (1 - r_i)^{n-k}, \quad k = 0, 1, 2, \ldots, n
+P(X = k) = \binom{n}{k} (r_i)^k (1 - r_i)^{n-k}, \quad k = 0, 1, 2, \ldots, n
 \end{equation}
 $$
 
 $$
 \begin{equation}
-	E(r_i) = r_i
+E(r_i) = r_i
 \end{equation}
 $$
 
@@ -65,9 +65,9 @@ $$
 
 $$
 \begin{aligned}
-	E(C_{c_{i}}) &= pc_i + x_i ic_i + x_i r_i \big[ pc_i + x_i ic_i + x_i r_i \big(pc_i + x_i ic_i + x_i r_i (\cdots)\big) \big] \\
-	&= pc_i + x_i ic_i + x_i r_i \frac{(pc_i + x_i ic_i)(1 - x_i^n r_i^n)}{1 - x_i r_i} \\
-	&= \underbrace{pc_i}_{\text{原始零配件购买成本}} + \underbrace{x_i ic_i}_{\text{零配件检测成本}} + \underbrace{x_i r_i \frac{pc_i + x_i ic_i}{1 - x_i r_i}}_{\text{替换不合格配件成本}} 
+E(C_{c_{i}}) &= pc_i + x_i ic_i + x_i r_i \big[ pc_i + x_i ic_i + x_i r_i \big(pc_i + x_i ic_i + x_i r_i (\cdots)\big) \big] \\
+&= pc_i + x_i ic_i + x_i r_i \frac{(pc_i + x_i ic_i)(1 - x_i^n r_i^n)}{1 - x_i r_i} \\
+&= \underbrace{pc_i}_{\text{原始零配件购买成本}} + \underbrace{x_i ic_i}_{\text{零配件检测成本}} + \underbrace{x_i r_i \frac{pc_i + x_i ic_i}{1 - x_i r_i}}_{\text{替换不合格配件成本}}
 \end{aligned}
 $$
 
@@ -77,7 +77,7 @@ $$
 
 $$
 \begin{equation}
-	E(r) = 1 - [1 - r_p] \prod_{i=1}^{2} [1 - r_i(1 - x_i)]
+E(r) = 1 - [1 - r_p] \prod_{i=1}^{2} [1 - r_i(1 - x_i)]
 \end{equation}
 $$
 
@@ -85,7 +85,7 @@ $$
 
 $$
 \begin{equation}
-	M_k = \underbrace{\sum_{i=1}^{k} \left[ ic_i + r_i \frac{(pc_i + ic_i)}{1 - r_i} \right]}_{\text{零配件检测、不合格件替换成本}}
+M_k = \underbrace{\sum_{i=1}^{k} \left[ ic_i + r_i \frac{(pc_i + ic_i)}{1 - r_i} \right]}_{\text{零配件检测、不合格件替换成本}}
 \end{equation}
 $$
 
@@ -93,16 +93,16 @@ $$
 
 $$
 \begin{align}
-	E(C_{p}) &= ac + x_p ic_p \nonumber \\
-	&\quad + x_p E(r) x_d \bigg\{ \bigg( dc + \sum_{i=1}^{2} \left[ ic_i + (pc_i + ic_i) \frac{r_i}{1 - r_i} \right] \bigg) \nonumber \\
-	&\qquad \qquad + ac + x_p ic_p + x_p r_p x_d \bigg( dc + ac + x_p r_p x_d (\cdots) \bigg) \bigg\}  \nonumber \\
-	&\quad + x_p E(r) (1 - x_d)(- P) \nonumber \\
-	&\quad + (1 - x_p) E(r) \bigg\{ \bigg( rc + dc + \sum_{i=1}^{2} \left[ ic_i + (pc_i + ic_i) \frac{r_i}{1 - r_i} \right] \bigg) \nonumber \\
-	&\qquad \qquad + ac + x_p ic_p + x_p r_p x_d \bigg( dc + ac + x_p r_p x_d (\cdots) \bigg) \bigg\} \nonumber \\
-	&= \underbrace{ac}_{\text{初次装配成本}} + \underbrace{x_p ic_p}_{\text{成品检测成本}} \nonumber \\
-	&\quad + \underbrace{x_p E(r) x_d}_{\text{拆解检测不合格成品}} \bigg\{ \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_2}_{\text{式M}} + \underbrace{ac + ic_p + r_p \frac{dc + ac}{1 - r_p}}_{\text{重新装配、检测直至合格成本}} \bigg\}  \nonumber \\
-	&\quad + \underbrace{x_p E(r) (1 - x_d)}_{\text{丢弃检测不合格成品}}\underbrace{(- P)}_{\text{无法出售的损失}} \nonumber \\
-	&\quad + \underbrace{(1 - x_p) E(r)}_{\text{调换未检测不合格成品}} \bigg\{ \underbrace{rc}_{\text{调换成本}} + \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_2}_{\text{式M}} + \underbrace{ac + x_p ic_p + x_p r_p x_d \frac{dc + ac}{1 - x_p r_p x_d}}_{\text{重新装配、检测直至合格成本}} \bigg\}
+E(C_{p}) &= ac + x_p ic_p \\
+&\quad + x_p E(r) x_d \bigg\{ \bigg( dc + \sum_{i=1}^{2} \left[ ic_i + (pc_i + ic_i) \frac{r_i}{1 - r_i} \right] \bigg) \\
+&\qquad \qquad + ac + x_p ic_p + x_p r_p x_d \bigg( dc + ac + x_p r_p x_d (\cdots) \bigg) \bigg\} \\
+&\quad + x_p E(r) (1 - x_d)(- P) \\
+&\quad + (1 - x_p) E(r) \bigg\{ \bigg( rc + dc + \sum_{i=1}^{2} \left[ ic_i + (pc_i + ic_i) \frac{r_i}{1 - r_i} \right] \bigg) \\
+&\qquad \qquad + ac + x_p ic_p + x_p r_p x_d \bigg( dc + ac + x_p r_p x_d (\cdots) \bigg) \bigg\} \\
+&= \underbrace{ac}_{\text{初次装配成本}} + \underbrace{x_p ic_p}_{\text{成品检测成本}}  \\
+&\quad + \underbrace{x_p E(r) x_d}_{\text{拆解检测不合格成品}} \bigg\{ \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_2}_{\text{式M}} + \underbrace{ac + ic_p + r_p \frac{dc + ac}{1 - r_p}}_{\text{重新装配、检测直至合格成本}} \bigg\}  \\
+&\quad + \underbrace{x_p E(r) (1 - x_d)}_{\text{丢弃检测不合格成品}}\underbrace{(- P)}_{\text{无法出售的损失}} \\
+&\quad + \underbrace{(1 - x_p) E(r)}_{\text{调换未检测不合格成品}} \bigg\{ \underbrace{rc}_{\text{调换成本}} + \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_2}_{\text{式M}} + \underbrace{ac + x_p ic_p + x_p r_p x_d \frac{dc + ac}{1 - x_p r_p x_d}}_{\text{重新装配、检测直至合格成本}} \bigg\}
 \end{align}
 $$
 
@@ -110,7 +110,7 @@ $$
 
 $$
 \begin{equation}
-	E(R) = P - \sum_{i=1}^{2} E(C_{c_{i}}) - E(C_{p})
+E(R) = P - \sum_{i=1}^{2} E(C_{c_{i}}) - E(C_{p})
 \end{equation}
 $$
 
@@ -118,9 +118,9 @@ $$
 
 $$
 \begin{alignat}{2}
-	\max \quad & E(R | x_i, x_p, x_d), i \in \{1, 2\}\\
-	\mbox{s.t.}\quad
-	& x_i, x_p, x_d \in \{0, 1\}, 
+\max \quad & E(R | x_i, x_p, x_d), i \in \{1, 2\}\\
+s.t.\quad
+& x_i, x_p, x_d \in \{0, 1\}, 
 \end{alignat}
 $$
 
@@ -149,11 +149,11 @@ $$
 
 $$
 \begin{align}
-	E(C_{h_j}) &= ac_j + x_j ic_j \nonumber \\
-	&\quad + x_j E(r^*) \bigg\{ \bigg( dc_j + \sum_{i=1}^{k} \left[ ic_i + (pc_i + ic_i) \frac{r_i}{1 - r_i} \right] \bigg) \nonumber \\
-	&\qquad \qquad + ac_j + x_j ic_j + x_j r_j \bigg( dc_j + ac_j + x_j r_j (\cdots) \bigg) \bigg\}  \nonumber \\
-	&= \underbrace{ac_j}_{\text{初次装配成本}} + \underbrace{x_j ic_j}_{\text{半成品检测成本}} \nonumber \\
-	&\quad + \underbrace{x_j E(r^*)}_{\text{拆解检测不合格半成品}} \bigg\{ \underbrace{dc_j}_{\text{拆解成本}} + \underbrace{M_k}_{\text{式M}} + \underbrace{ac_j + ic_j + r_j \frac{dc_j + ac_j}{1 - r_j}}_{\text{重新装配、检测直至合格成本}} \bigg\}  \nonumber \\
+E(C_{h_j}) &= ac_j + x_j ic_j \\
+&\quad + x_j E(r^*) \bigg\{ \bigg( dc_j + \sum_{i=1}^{k} \left[ ic_i + (pc_i + ic_i) \frac{r_i}{1 - r_i} \right] \bigg) \\
+&\qquad \qquad + ac_j + x_j ic_j + x_j r_j \bigg( dc_j + ac_j + x_j r_j (\cdots) \bigg) \bigg\} \\
+&= \underbrace{ac_j}_{\text{初次装配成本}} + \underbrace{x_j ic_j}_{\text{半成品检测成本}} \\
+&\quad + \underbrace{x_j E(r^*)}_{\text{拆解检测不合格半成品}} \bigg\{ \underbrace{dc_j}_{\text{拆解成本}} + \underbrace{M_k}_{\text{式M}} + \underbrace{ac_j + ic_j + r_j \frac{dc_j + ac_j}{1 - r_j}}_{\text{重新装配、检测直至合格成本}} \bigg\} \\
 \end{align}
 $$
 
@@ -163,7 +163,7 @@ $$
 
 $$
 \begin{equation}
-	E(r^{**}) = 1 - [1 - r_p] \prod_{j=1}^{l} [1 - r_j(1 - x_j)]
+E(r^{**}) = 1 - [1 - r_p] \prod_{j=1}^{l} [1 - r_j(1 - x_j)]
 \end{equation}
 $$
 
@@ -171,7 +171,7 @@ $$
 
 $$
 \begin{equation}
-	M_l = \underbrace{\sum_{j=1}^{l} \left[ ic_j + E(r^*){dc_j + M_k + ac_j+ ic_j + r_j \frac{dc_j + ac_j}{1 - r_j}} \right]}_{\text{半成品检测、不合格品替换成本}}
+M_l = \underbrace{\sum_{j=1}^{l} \left[ ic_j + E(r^*){dc_j + M_k + ac_j+ ic_j + r_j \frac{dc_j + ac_j}{1 - r_j}} \right]}_{\text{半成品检测、不合格品替换成本}}
 \end{equation}
 $$
 
@@ -179,10 +179,10 @@ $$
 
 $$
 \begin{align}
-	E(C_{p}) &= \underbrace{ac}_{\text{初次装配成本}} + \underbrace{x_p ic_p}_{\text{成品检测成本}} \nonumber \\
-	&\quad + \underbrace{x_p E(r) x_d}_{\text{拆解检测不合格成品}} \bigg\{ \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_l}_{\text{式M}} + \underbrace{ac + ic_p + r_p \frac{dc + ac}{1 - r_p}}_{\text{重新装配、检测直至合格成本}} \bigg\}  \nonumber \\
-	&\quad + \underbrace{x_p E(r) (1 - x_d)}_{\text{丢弃检测不合格成品}}\underbrace{(- P)}_{\text{无法出售的损失}} \nonumber \\
-	&\quad + \underbrace{(1 - x_p) E(r)}_{\text{调换未检测不合格成品}} \bigg\{ \underbrace{rc}_{\text{调换成本}} + \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_l}_{\text{式M}} + \underbrace{ac + x_p ic_p + x_p r_p x_d \frac{dc + ac}{1 - x_p r_p x_d}}_{\text{重新装配、检测直至合格成本}} \bigg\}
+E(C_{p}) &= \underbrace{ac}_{\text{初次装配成本}} + \underbrace{x_p ic_p}_{\text{成品检测成本}} \\
+&\quad + \underbrace{x_p E(r) x_d}_{\text{拆解检测不合格成品}} \bigg\{ \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_l}_{\text{式M}} + \underbrace{ac + ic_p + r_p \frac{dc + ac}{1 - r_p}}_{\text{重新装配、检测直至合格成本}} \bigg\} \\
+&\quad + \underbrace{x_p E(r) (1 - x_d)}_{\text{丢弃检测不合格成品}}\underbrace{(- P)}_{\text{无法出售的损失}} \\
+&\quad + \underbrace{(1 - x_p) E(r)}_{\text{调换未检测不合格成品}} \bigg\{ \underbrace{rc}_{\text{调换成本}} + \underbrace{dc}_{\text{拆解成本}} + \underbrace{M_l}_{\text{式M}} + \underbrace{ac + x_p ic_p + x_p r_p x_d \frac{dc + ac}{1 - x_p r_p x_d}}_{\text{重新装配、检测直至合格成本}} \bigg\}
 \end{align}
 $$
 
@@ -190,7 +190,7 @@ $$
 
 $$
 \begin{equation}
-	E(R) = P - \sum_{i=1}^{n} E(C_{c_{i}}) - \sum_{j=1}^{l} E(C_{h_{j}}) - E(C_{p})
+E(R) = P - \sum_{i=1}^{n} E(C_{c_{i}}) - \sum_{j=1}^{l} E(C_{h_{j}}) - E(C_{p})
 \end{equation}
 $$
 
@@ -198,9 +198,9 @@ $$
 
 $$
 \begin{alignat}{2}
-	\max \quad & E(R | x_i, x_j, x_p, x_d), i \in \{1, 8\}, j \in \{1, 3\}\\
-	\mbox{s.t.}\quad
-	& x_i, x_j, x_p, x_d \in \{0, 1\}, 
+\max \quad & E(R | x_i, x_j, x_p, x_d), i \in \{1, 8\}, j \in \{1, 3\}\\
+s.t.\quad
+& x_i, x_j, x_p, x_d \in \{0, 1\}, 
 \end{alignat}
 $$
 
